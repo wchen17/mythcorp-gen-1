@@ -1,8 +1,7 @@
 # This is the main configuration file for a Cloudflare Worker.
 
-# The name of your worker. This will be part of its URL.
-# Replace "mythcorp-gen-1" with your desired project name.
-name = "mythcorp-gen-1"
+# The name of your worker. This MUST match your project name on Cloudflare.
+name = "mythcorp-gen1"
 
 # The main entry point for your Worker's server-side code.
 # Next.js automatically generates this file when it builds for Cloudflare.
@@ -24,5 +23,5 @@ watch_dir = "app"
 # Sets the compatibility date for the Workers runtime.
 # This ensures that future updates to Cloudflare's systems don't break your project.
 # It's best practice to set this to the current date when you create the file.
-compatibility_date = "2025-07-20"
+compatibility_date = "2025-07-21"
 
