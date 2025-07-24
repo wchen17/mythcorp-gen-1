@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --no-lint",
-    "postbuild": "npx @cloudflare/next-on-pages",
+    "build": "next build --no-lint && npx @cloudflare/next-on-pages",
+    "preview": "npx @cloudflare/next-on-pages .wrangler/dist/static",
+    "deploy": "wrangler deploy",
     "start": "next start",
     "lint": "next lint",
     "prod": "npm run build && npm run start"
