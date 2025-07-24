@@ -1,27 +1,9 @@
-# This is the main configuration file for a Cloudflare Worker.
-
-# The name of your worker. This MUST match your project name on Cloudflare.
 name = "mythcorp-gen1"
+main = ".wrangler/dist/_worker.js"
+compatibility_date = "2025-07-24"
 
-# The main entry point for your Worker's server-side code.
-# Next.js automatically generates this file when it builds for Cloudflare.
-main = ".wrangler/dist/server/server.mjs"
-
-# This section tells the Worker where to find your static assets (HTML, CSS, images, etc.)
 [site]
-# The directory where your built static files are located.
-# For Next.js, this is the ".next/static" folder.
-bucket = ".next/static"
+bucket = ".wrangler/dist/static"
 
-# This section defines how your project should be built.
 [build]
-# The command that wrangler will run to build your Next.js application.
 command = "npm run build"
-# The directory to watch for changes.
-watch_dir = "app"
-
-# Sets the compatibility date for the Workers runtime.
-# This ensures that future updates to Cloudflare's systems don't break your project.
-# It's best practice to set this to the current date when you create the file.
-compatibility_date = "2025-07-21"
-
