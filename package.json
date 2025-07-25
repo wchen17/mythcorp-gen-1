@@ -4,7 +4,7 @@
   "private": true,
 "scripts": {
   "dev": "next dev --turbopack",
-  "build": "next build --no-lint && [ \"$CI\" != \"true\" ] && npx @cloudflare/next-on-pages",
+  "build": "cross-env-shell \"next build --no-lint && (if [ \\\"$CI\\\" != \\\"true\\\" ]; then npx @cloudflare/next-on-pages; fi)\"",
   "preview": "npx @cloudflare/next-on-pages .wrangler/dist/static",
   "deploy": "wrangler deploy",
   "start": "next start",
@@ -29,6 +29,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.178.1",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.4.1",
     "tailwindcss": "^4",
