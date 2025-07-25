@@ -1,9 +1,0 @@
-name = "mythcorp-gen1"
-main = ".wrangler/dist/_worker.js"
-compatibility_date = "2025-07-24"
-
-[site]
-bucket = ".wrangler/dist/static"
-
-[build]
-command = "npm run build"
