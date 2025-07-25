@@ -1,16 +1,9 @@
-# The name of your worker.
 name = "mythcorp-gen1"
-
-# The entrypoint for your worker.
 main = ".wrangler/dist/_worker.js"
-
-# Compatibility settings.
 compatibility_date = "2025-07-24"
 
-# Section for static assets.
 [site]
 bucket = ".wrangler/dist/static"
 
-# Section for the build command.
 [build]
 command = "npm run build"

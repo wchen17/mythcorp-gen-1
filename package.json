@@ -2,15 +2,15 @@
   "name": "mythcorp-final",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev --turbopack",
-  "build": "cross-env-shell \"next build --no-lint && (if [ \\\"$CI\\\" != \\\"true\\\" ]; then npx @cloudflare/next-on-pages; fi)\"",
-  "preview": "npx @cloudflare/next-on-pages .wrangler/dist/static",
-  "deploy": "wrangler deploy",
-  "start": "next start",
-  "lint": "next lint",
-  "prod": "npm run build && npm run start"
-},
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "cross-env-shell \"next build --no-lint && (if [ \\\"$CI\\\" != \\\"true\\\" ]; then npx @cloudflare/next-on-pages; fi)\"",
+    "preview": "npx @cloudflare/next-on-pages .wrangler/dist/static",
+    "deploy": "wrangler deploy",
+    "start": "next start",
+    "lint": "next lint",
+    "prod": "npm run build && npm run start"
+  },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.13",
     "@react-three/drei": "^10.5.1",
